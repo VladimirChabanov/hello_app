@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return f'Current date and time is  {datetime.datetime.now()}'
+    return f'Current date is  {datetime.datetime.now().date()}'
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
