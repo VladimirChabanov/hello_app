@@ -1,0 +1,1 @@
+[![Push Date Test](https://github.com/retr0gg/hello_app/actions/workflows/test.yml/badge.svg)](https://github.com/retr0gg/hello_app/actions/workflows/test.yml)
