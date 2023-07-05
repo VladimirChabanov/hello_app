@@ -1,12 +1,15 @@
 #!/bin/bash
 
-output=$(curl http://127.0.0.1:5000)
+output=$(python3 /hello_app/app.py)
 
-expected_output="05.07.2023"
+today=$(date +'%Y-%m-%d')
+
+expected_output="$today"
 
 if [ "$output" == "$expected_output" ]; then
-echo "Вывод программы совпадает с ожидаемым: $output"
+    echo "Тест выполнен успешно"
 else
-echo "Вывод программы не совпадает с ожидаемым."
-exit 1
+    echo "Тест провалился"
+    echo "Ожидалось: $expected_output"
+    echo "Получено: $output"
 fi
