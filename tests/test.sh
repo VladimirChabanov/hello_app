@@ -4,7 +4,7 @@ python app.py
 
 output=$(./app)
 
-expected_output="05.07.2023"
+expected_output="2023-07-05"
 
 if [ "$output" == "$expected_output" ]; then
 echo "Вывод программы совпадает с ожидаемым: $output"
