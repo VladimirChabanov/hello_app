@@ -1,4 +1,4 @@
-name: Pull Request To Dev
+name: Test
 run-name: Run Integration Tests
 on:
   push:
