@@ -17,5 +17,5 @@ jobs:
       - name: Test GET-request
         run: |
           chmod +x ./tests/test.sh
-          ./tests/date-test.sh
+          ./tests/test.sh
         shell: bash
