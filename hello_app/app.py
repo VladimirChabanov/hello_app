@@ -1,11 +1,13 @@
 import os
 from flask import Flask, request
+from datetime import date
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return f'My server IP address is {os.environ["HOST_IP"]}'
+today = date.today().strftime("%d.%m.%Y")
+return f'{today}'
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+app.run(debug=True, host='0.0.0.0')
