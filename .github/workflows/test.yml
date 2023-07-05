@@ -3,7 +3,7 @@ name: Push Date Test
  on: push
  jobs:
    date_testing:
-     runs-on: retr0gggit
+     runs-on: retr0gg
      steps:
        - name: Checkout
          uses: actions/checkout@v3
