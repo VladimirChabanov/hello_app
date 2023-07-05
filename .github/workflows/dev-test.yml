@@ -10,7 +10,7 @@ jobs:
       - name: Install requirements
         run: pip install -r requirements.txt
       - name: Run app
-        run: python3 ./src/app/app.py &
+        run: python3 hello_app/app.py &
       - name: Run sleep
         run: sleep 3s  
         shell: bash
