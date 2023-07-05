@@ -11,6 +11,8 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run app
         run: python3 ./src/app/app.py &
+      - name: Run sleep
+        run: bash sleep 3s  
       - name: Test GET-request
         run: |
           chmod +x ./tests/date-test.sh
