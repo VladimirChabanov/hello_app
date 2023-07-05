@@ -1,0 +1,18 @@
+name: Pull Request To Dev
+run-name: Run Integration Tests
+on:
+  pull_request:
+    branches:
+      - 'dev'
+jobs:
+  integration_testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install requirements
+        run: pip install -r requirements.txt
+      - name: Run app
+        run: python3 ./hello_app/app.py &
+      - name: Test app
+        run: ./hello_app/tests/test.sh

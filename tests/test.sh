@@ -1,13 +1,7 @@
-#!/bin/bash
-
-python app.py
-
-output=$(./app)
-
-expected_output="2023-07-05"
-
-if [ "$output" == "$expected_output" ]; then
-echo "Вывод программы совпадает с ожидаемым: $output"
+ANSW=$(curl http://127.0.0.1:5000/)
+if [ "$ANSW" != "Current date and time is 2023-07-05" ]; then
+    echo "Test FAIL"
+    exit 1
 else
-echo "Вывод программы не совпадает с ожидаемым. Ожидается: $expected_output, >
+    echo "Test PASS"
 fi
