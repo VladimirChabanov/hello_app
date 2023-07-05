@@ -16,6 +16,6 @@ jobs:
         shell: bash
       - name: Test GET-request
         run: |
-          chmod +x ./tests/date-test.sh
+          chmod +x ./tests/test.sh
           ./tests/date-test.sh
         shell: bash
