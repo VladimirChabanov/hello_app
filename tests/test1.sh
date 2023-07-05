@@ -1,4 +1,12 @@
-if [ "$output" == "05.07.2023" ]; then
-echo "Вывод программы совпадает с ожидаемым: $output"
+#!/bin/bash
+
+g++ app.cpp -o app
+
+output=$(./app)
+
+expected_output="05.07.2023"
+
+if [ "$output" == "$expected_output" ]; then
+echo "Test succesfull: $output"
 else
-echo "Вывод программы не совпадает с ожидаемым. Ожидается: $expected_output, получено: $output"
+echo "Test failed. Expected output: $expected_output"
