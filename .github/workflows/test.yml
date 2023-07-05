@@ -1,7 +1,7 @@
 name: Push Date Test
- run-name: Run Push Date Test
- on: push
- jobs:
+run-name: Run Push Date Test
+on: push
+jobs:
    date_testing:
      runs-on: ubuntu-latest
      steps:
