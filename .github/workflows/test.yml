@@ -3,7 +3,7 @@ name: Push Date Test
  on: push
  jobs:
    date_testing:
-     runs-on: retr0gg
+     runs-on: ubuntu-latest
      steps:
        - name: Checkout
          uses: actions/checkout@v3
