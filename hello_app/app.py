@@ -6,9 +6,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-today = date.today()
-formatted_date = today.strftime('%d.%m.%Y')
-return f'{formatted_date}'
+    today = date.today()
+    formatted_date = today.strftime('%d.%m.%Y')
+    return f'{formatted_date}'
 
 if __name__ == '__main__':
-app.run(debug=True, host='0.0.0.0')
+    app.run(debug=True, host='0.0.0.0')
