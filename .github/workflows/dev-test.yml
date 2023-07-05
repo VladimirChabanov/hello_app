@@ -12,7 +12,8 @@ jobs:
       - name: Run app
         run: python3 ./src/app/app.py &
       - name: Run sleep
-        run: bash sleep 3s  
+        run: sleep 3s  
+        shell: bash
       - name: Test GET-request
         run: |
           chmod +x ./tests/date-test.sh
