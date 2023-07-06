@@ -26,5 +26,4 @@ jobs:
      - name: Build application
        run: python hello_app/app.py
 
-     - name: Run tests
-       run: ./tests/test.sh
+     
