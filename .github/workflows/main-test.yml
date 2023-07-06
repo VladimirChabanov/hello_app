@@ -24,6 +24,6 @@ jobs:
           pip install -r requirements.txt
       
       - name: Run app
-        run: python hello_app/main.py &
+        run: python hello_app/app.py &
       - name: Run test
         run: source tests/test.sh
