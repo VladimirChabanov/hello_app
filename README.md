@@ -1,0 +1,1 @@
+[![Push Date Test](https://github.com/TimurAbdurmanov2808/hello_app/actions/workflows/test.yaml/badge.svg?branch=TimurExam)](https://github.com/TimurAbdurmanov2808/hello_app/actions/workflows/test.yaml)
