@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Запуск сервера в фоновом режиме
-python3 app.py &
+python3 hello_app/app.py &
 
 # Получение идентификатора процесса сервера
 server_pid=$!
