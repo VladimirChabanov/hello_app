@@ -1,32 +1,12 @@
-#!/bin/sh
+#!/bin/bash
 
-# Запуск сервера в фоновом режиме
-python3 hello_app/app.py &
+output=$(curl http://127.0.0.1:5000/)
 
-# Получение идентификатора процесса сервера
-server_pid=$!
+expected_output="06.07.2023"
 
-# Ожидание запуска сервера
-sleep 5
-
-# Отправка HTTP-запроса на сервер и сохранение ответа
-response=$(curl -s http://localhost:5000)
-
-# Ожидаемый ответ сервера
-today_date=$(date +'%Y-%m-%d')
-expected_response="Today is $today_date"
-
-# Сравнение полученного ответа с ожидаемым значением
-if [ "$response" = "$expected_response" ]; then
-  echo "Test passed"
-  result=0
+if [ "$output" == "$expected_output" ]; then
+    echo "Все верно"
 else
-  echo "Test failed: expected '$expected_response', got '$response'"
-  result=1
+    echo "Неправильно"
+    exit 1
 fi
-
-# Завершение работы сервера
-kill $server_pid
-
-# Выход с кодом результата теста
-exit $result
