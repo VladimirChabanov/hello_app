@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 EXPECTED_DATE=$(date +"%a %b %d")
 
