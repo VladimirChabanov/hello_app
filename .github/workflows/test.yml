@@ -18,7 +18,7 @@ jobs:
      - name: Set up Python
        uses: actions/setup-python@v2
        with:
-         python-version: 3.x
+         python-version: 3.11.4
 
      - name: Install dependencies
        run: pip install -r requirements.txt
@@ -27,4 +27,4 @@ jobs:
        run: python hello_app/app.py
 
      - name: Run tests
-       run: tests/test.sh
+       run: hello_app/tests/test.sh
