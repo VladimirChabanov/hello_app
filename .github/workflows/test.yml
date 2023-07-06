@@ -28,5 +28,5 @@ jobs:
 
     - name: Build and test app
       run: |
-        chmod +x test.sh
-        ./test.sh
+        chmod +x tests/test.sh
+        ./tests/test.sh
