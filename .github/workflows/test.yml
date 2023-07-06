@@ -1,0 +1,17 @@
+name: test actualy time
+run-name: one test
+on:
+  push:
+    branches:
+      - ovcharenko
+jobs:
+  run:
+    name: Settings
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Give prava
+        run: chmod +x ./hello_app/app.py
+      - name: Run test
+        run: source tests/test.sh
