@@ -1,0 +1,19 @@
+name: TEST
+run-name: Run Push TEST
+on: push
+jobs:
+  date_testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install requirements
+        run: pip install -r requirements.txt
+      - name: Run app
+        run: python3 hello_app/app.py & 
+        shell: bash
+      - name: Test GET-request
+        run: |
+          chmod +x ./test/PyTest.sh
+          ./test/PyTest.sh
+        shell: bash
