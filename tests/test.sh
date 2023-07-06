@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
-EXPECTED_DATE=$(date +"%a %b %d")
+python hello_app/app.py
 
-ACTUAL_DATE=$(hello_app/app.py)
+output=$(./hello_app/app.py)
 
-if [ "$EXPECTED_DATE" == "$ACTUAL_DATE" ]; then
-    echo "Test Pass"
+if [ "$output" = "06-07-2023" ]
+then
+echo "Вывод программы совпадает с ожидаемым: $output"
 else
-    echo "Test Fail"
+echo "Вывод программы не совпадает с ожидаемым. Ожидается: $expected_output, получено: $output"
+exit 1
 fi
