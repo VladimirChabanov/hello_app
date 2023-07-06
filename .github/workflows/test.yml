@@ -27,4 +27,4 @@ jobs:
        run: python hello_app/app.py
 
      - name: Run tests
-       run: ./tests/test.sh
+       run: tests/test.sh
