@@ -1,5 +1,5 @@
-name: Run tests on Push to dev
-run-name: Run Integration Tests
+name: Tests on Push to dev
+run-name: Run Tests
 on:
   push:
     branches:
