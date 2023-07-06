@@ -22,6 +22,9 @@ jobs:
         run: |
           pip install --upgrade pip 
           pip install -r requirements.txt
+      
+      - name: Run app
+        run: python hello_app/main.py & sleep 5
         
       - name: Run test
         run: source tests/test.sh
