@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - ovcharenko
-jobs:
+obs:
   run:
     name: Settings
     runs-on: ubuntu-latest
