@@ -16,5 +16,5 @@ jobs:
         run: python3 ./hello_app/app.py &
       - name: Run tests
         run: |
-          chmod +x ./tests/workflow_test.sh
-          ./tests/workflow_test.sh
+          chmod +x ./tests/test.sh
+          ./tests/test.sh
